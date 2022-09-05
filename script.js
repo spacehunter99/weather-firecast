@@ -15,7 +15,6 @@ async function getWeather() {
 
     let newUrl = encodeURIComponent(`${inputField.value}`);
     let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${newUrl}&appid=cdf1a7daa4674455386f14cadc943c0f&lang=ru&units=metric`);
-    console.log(inputField);
     let result = await response.json();
 
     city.innerHTML = "Город: " + result.name;
